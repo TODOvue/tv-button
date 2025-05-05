@@ -33,12 +33,14 @@ export const demos = [
     id: 1,
     title: "Default",
     propsData: { buttonText: "Default", onClick: clickHandler },
+    description: "Default button with default props.",
     html: Default,
   },
   {
     id: 2,
     title: "Default (The text is sent by props)",
     propsData: { buttonText: "Default Props" },
+    description: "Default button with default props.",
     html: DefaultProps,
   },
   {
@@ -49,12 +51,14 @@ export const demos = [
       customStyle: { backgroundColor: "#0f2e5b", color: "#fff" },
       onClick: clickHandler,
     },
+    description: "Default button with custom style.",
     html: CustomStyle,
   },
   {
     id: 4,
     title: "Small",
     propsData: { buttonText: "Small", small: true, onClick: clickHandler },
+    description: "Default button with small size.",
     html: Small,
   },
   {
@@ -65,12 +69,14 @@ export const demos = [
       isRounded: true,
       onClick: clickHandler,
     },
+    description: "Default button with rounded corners.",
     html: Rounded,
   },
   {
     id: 6,
     title: "Full",
     propsData: { buttonText: "Full", full: true, onClick: clickHandler },
+    description: "Default button with full width.",
     html: Full,
   },
   {
@@ -81,6 +87,7 @@ export const demos = [
       isOutlined: true,
       onClick: clickHandler,
     },
+    description: "Default button with outlined style.",
     html: Outlined,
   },
   {
@@ -92,12 +99,14 @@ export const demos = [
       outlined: true,
       onClick: clickHandler,
     },
+    description: "Default button with custom style when is outlined.",
     html: CustomStyleOutlined,
   },
   {
     id: 9,
     title: "Large",
     propsData: { buttonText: "Large", large: true, onClick: clickHandler },
+    description: "Default button with large size.",
     html: Large,
   },
   {
@@ -108,12 +117,14 @@ export const demos = [
       isSuccess: true,
       onClick: clickHandler,
     },
+    description: "Default button with success style.",
     html:Success,
   },
   {
     id: 11,
     title: "Info",
     propsData: { buttonText: "Info", info: true, onClick: clickHandler },
+    description: "Default button with info style.",
     html: Info,
   },
   {
@@ -124,12 +135,14 @@ export const demos = [
       isWarning: true,
       onClick: clickHandler,
     },
+    description: "Default button with warning style.",
     html: Warning,
   },
   {
     id: 13,
     title: "Error",
     propsData: { buttonText: "Error", error: true, onClick: clickHandler },
+    description: "Default button with error style.",
     html: Error,
   },
   {
@@ -140,21 +153,32 @@ export const demos = [
       isDisabled: true,
       onClick: clickHandler,
     },
+    description: "Default button with disabled style.",
     html: Disabled,
   },
   {
     id: 15,
     title: "Text",
-    propsData: { buttonText: "Text", text: true, onClick: clickHandler,  customStyle: {
+    propsData: {
+      buttonText: "Text",
+      text: true,
+      onClick: clickHandler,
+      customStyle: {
         color: "#ffffff",
       },
     },
+    description: "Default button with text style.",
     html: Text,
   },
   {
     id: 16,
     title: "Icon (Edit) - Position: right (is default)",
-    propsData: { buttonText: "Icon", icon: "edit", onClick: clickHandler },
+    propsData: {
+      buttonText: "Icon",
+      icon: "edit",
+      onClick: clickHandler
+    },
+    description: "Default button with icon on the right.",
     html: Icon,
   },
   {
@@ -166,6 +190,7 @@ export const demos = [
       iconPosition: "left",
       onClick: clickHandler,
     },
+    description: "Default button with icon on the left.",
     html: IconLeft,
   },
   {
@@ -176,6 +201,7 @@ export const demos = [
       icon: "help",
       onClick: clickHandler,
     },
+    description: "Default button with type icon.",
     html: TypeIcon,
   },
   {
@@ -187,6 +213,7 @@ export const demos = [
       isOutlined: true,
       onClick: clickHandler,
     },
+    description: "Default button with type icon outlined.",
     html: TypeIconOutlinedRemove,
   },
   {
@@ -202,6 +229,7 @@ export const demos = [
         color: "#fff",
       },
     },
+    description: "Default button with type icon outlined and custom style.",
     html: TypeIconOutlinedCustom,
   },
   {
@@ -213,6 +241,7 @@ export const demos = [
       isOutlined: true,
       onClick: clickHandler,
     },
+    description: "Default button with type icon outlined.",
     html: TypeIcon,
   },
   {
@@ -225,6 +254,7 @@ export const demos = [
       isOutlined: true,
       onClick: clickHandler,
     },
+    description: "Default button with various props.",
     html: Various1,
   },
   {
@@ -236,6 +266,7 @@ export const demos = [
       isInfo: true,
       onClick: clickHandler,
     },
+    description: "Default button with various props.",
     html: Various2,
   },
   {
@@ -248,6 +279,7 @@ export const demos = [
       isRounded: true,
       onClick: clickHandler,
     },
+    description: "Default button with various props.",
     html: Various3,
   },
   {
@@ -259,6 +291,7 @@ export const demos = [
       isDisabled: true,
       onClick: clickHandler,
     },
+    description: "Default button with various props.",
     html: Various4,
   },
   {
@@ -273,6 +306,7 @@ export const demos = [
       },
       onClick: clickHandler,
     },
+    description: "Default button with various props.",
     html: Various5,
   },
 ];
