@@ -1,6 +1,6 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
-import TvDemo from '@todovue/tvdemo'
+import TvDemo from '@todovue/tv-demo'
 import { demos } from "../utils/mocks.js";
 
 const TvButton = defineAsyncComponent(/* webpackChunkName: "TvButton" */() => import('../components/TvButton.vue'))
@@ -12,10 +12,10 @@ const TvButton = defineAsyncComponent(/* webpackChunkName: "TvButton" */() => im
     :component="TvButton"
     :variants="demos"
     nameComponent="TvButton"
-    npmInstall="@todovue/tvbutton"
-    sourceLink="https://github.com/TODOvue/todovue-button"
-    urlClone="https://github.com/TODOvue/todovue-button.git"
-    version="1.1.2"
+    npmInstall="@todovue/tv-button"
+    sourceLink="https://github.com/TODOvue/tv-button"
+    urlClone="https://github.com/TODOvue/tv-button.git"
+    version="1.0.0"
   ></tv-demo>
 </template>
 

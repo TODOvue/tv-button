@@ -4,40 +4,40 @@
 # TODOvue Button
 ###### TvButton is a custom button component for web applications.
 
-[![npm](https://img.shields.io/npm/v/@todovue/tvbutton.svg)](https://www.npmjs.com/package/@todovue/tvbutton) [![Netlify Status](https://api.netlify.com/api/v1/badges/3c413109-63aa-41d7-8126-a527435f5512/deploy-status)](https://app.netlify.com/sites/todovue-button/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tvbutton.svg)](https://www.npmjs.com/package/@todovue/tvbutton)
-[![npm](https://img.shields.io/npm/d18m/@todovue/tvbutton.svg)](https://www.npmjs.com/package/@todovue/tvbutton) ![GitHub](https://img.shields.io/github/license/TODOvue/todovue-button) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/todovue-button)
+[![npm](https://img.shields.io/npm/v/@todovue/tv-button.svg)](https://www.npmjs.com/package/@todovue/tv-button) [![Netlify Status](https://api.netlify.com/api/v1/badges/3c413109-63aa-41d7-8126-a527435f5512/deploy-status)](https://app.netlify.com/sites/tv-button/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tv-button.svg)](https://www.npmjs.com/package/@todovue/tv-button)
+[![npm](https://img.shields.io/npm/d18m/@todovue/tv-button.svg)](https://www.npmjs.com/package/@todovue/tv-button) ![GitHub](https://img.shields.io/github/license/TODOvue/tv-button) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/tv-button)
 
 ## Table of Contents
-- [Demo](https://todovue-button.netlify.app/)
+- [Demo](https://tv-button.netlify.app/)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Props](#props)
 - [Events](#events)
 - [Customize](#customize)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-button/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-button/blob/main/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-button/blob/main/LICENSE)
+- [Changelog](https://github.com/TODOvue/tv-button/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/tv-button/blob/main/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/tv-button/blob/main/LICENSE)
 
 ## Installation
 Install with npm or yarn
 ```bash
-npm install @todovue/tvbutton
+npm install @todovue/tv-button
 ```
 ```bash
-yarn add @todovue/tvbutton
+yarn add @todovue/tv-button
 ```
 
 Import the component:
 ```js
-import TvButton from "@todovue/tvbutton";
+import TvButton from "@todovue/tv-button";
 ```
 
 You can also register it globally in **main.js**:
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import TvButton from "@todovue/tvbutton";
+import TvButton from "@todovue/tv-button";
 
 const app = createApp(App);
 app.component("TvButton", TvButton);
@@ -49,7 +49,7 @@ app.mount("#app");
 ## Usage
 ```html
 <script setup>
-import TvButton from "@todovue/tvbutton"; // Only if not imported in main.js
+import TvButton from "@todovue/tv-button"; // Only if not imported in main.js
     
 const handleClick = () => {
   console.log("Clicked!");
@@ -127,7 +127,7 @@ You can customize the button style using `customStyle`. You can include `backgro
 
 ```html
 <script setup>
-import TvButton from "@todovue/tvbutton";
+import TvButton from "@todovue/tv-button";
 
 const customStyle = {
   backgroundColor: "#0f2e5b",
@@ -158,10 +158,10 @@ If you want a button with only an icon, use `type="icon"`. The button will autom
 ## Development
 Clone the repository and install the dependencies:
 ```bash
-git clone https://github.com/TODOvue/todovue-button.git
-cd todovue-button
+git clone https://github.com/TODOvue/tv-button.git
+cd tv-button
 yarn install
 ```
 ---
 ## License
-[MIT](https://github.com/TODOvue/todovue-button/blob/main/LICENSE)
+[MIT](https://github.com/TODOvue/tv-button/blob/main/LICENSE)

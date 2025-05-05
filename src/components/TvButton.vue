@@ -68,6 +68,7 @@ const buttonStyles = computed(() => ({
 
 <template>
   <button
+    :aria-label="ariaLabel"
     :class="buttonClasses"
     :disabled="isDisabled"
     :role="type"
@@ -77,13 +78,12 @@ const buttonStyles = computed(() => ({
     @mouseleave="manageHover(false)"
     @mouseover="manageHover(true)"
     class="tv-btn"
-    :aria-label="ariaLabel"
   >
     <span
-      v-if="icon"
-      v-html="iconContent"
-      class="tv-icon"
       :class="[`tv-icon-position-${iconPosition}`]"
+      class="tv-icon"
+      v-html="iconContent"
+      v-if="icon"
     />
     <template v-if="buttonText">{{ buttonText }}</template>
     <slot v-else></slot>
