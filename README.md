@@ -89,28 +89,42 @@ const handleClick = () => {
 ### 🔹 **Icons**
 You can use the following icons (`icon="account"`):
 - `account`
+- `add-user`
 - `alert`
 - `arrow-down`
 - `arrow-left`
 - `arrow-right`
 - `arrow-up`
+- `block`
+- `calendar`
 - `cancel`
+- `check`
 - `clone`
 - `dark`
 - `download`
 - `edit`
+- `external-link`
 - `favorite`
+- `filter`
 - `help`
+- `info`
 - `light`
+- `lock`
+- `login`
+- `logout`
 - `menu`
 - `minus`
+- `notification`
 - `plus`
 - `remove`
 - `search`
 - `settings`
 - `share`
 - `star`
+- `todovue`
+- `unlock`
 - `update`
+- `view`
 
 ---
 
@@ -149,8 +163,8 @@ If you want a button with only an icon, use `type="icon"`. The button will autom
 
 ```html
 <tv-button icon="trash" type="icon" />
-<tv-button icon="check" type="icon" iconColor="green" />
-<tv-button icon="info" type="icon" iconColor="blue" />
+<tv-button icon="check" type="icon"/>
+<tv-button icon="info" type="icon" />
 ```
 
 ---
