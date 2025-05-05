@@ -1,70 +1,33 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to `@todovue/tv-button` will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.1.2] - 17/03/2025
+---
 
-### Fixed
-- Fixed imports in demos.
-- Fixed version in page demo.
+## [1.0.0] - 2025-05-05
 
-## [1.1.1] - 17/03/2025
+### ✨ Added
+- Introduced `TvButton` as a reusable and fully customizable button component.
+- Support for multiple button variants: `default`, `outlined`, `text`, `icon-only`.
+- Size options: `small`, `default`, `large`.
+- Status-based styles: `success`, `info`, `warning`, `error`.
+- `disabled` state with the appropriate accessibility handling.
+- Support for custom styles via `customStyle` prop.
+- Icon integration using the `icon` and `iconPosition` props.
+- ARIA accessibility via `ariaLabel` prop.
+- Dual-event emission: `click` and `click-button`.
 
-### Fixed
-- Updated branch paths in `README.md` to correctly point to the `main` branch.
-- Fixed import documentation in `README.md`.
-- Removed unused `preview` script.
+### 📦 Included Icons
+- 40+ built-in icons (`account`, `add-user`, `check`, `info`, `logout`, `settings`, etc.)
+- All icons are SVG-based and support `currentColor` for theme compatibility.
 
-### Updated
-- Upgraded `tv-demo` dependency to version 1.3.2.
+### 🛠️ Tooling & Setup
+- Bundled and built using Vite.
+- Ready-to-use as a standalone or global Vue component.
+- Scoped styles using SCSS.
 
-## [1.1.0] - 25/02/2025
 
-### Added
-- Add `clone.svg`, `download.svg` and `update.svg` icons.
-- Add `ariaLabel` prop to improve accessibility.
-- Add `todovue.svg` icon.
-- Add `@click` event to the button.
-- Refactor prop names for consistency (`isSuccess` → `success`, etc.).
-
-### Changed
-- Update button styles.
-- Update demos to reflect new props.
-
-### Fixed
-- Fix icon rendering to correctly apply color changes.
-
-## [1.0.3] - 24/02/2025
-
-### Changed
-- Demos are updated to separate files.
-
-## [1.0.2]: - 23/02/2025
-
-### Fixed
-- Fix demo build typescript definition.
-
-## [1.0.1] - 23/02/2025
-
-### Added
-- Add demo build script.
-- Configure Vite for demo output.
-
-### Fixed
-- Fix construction demo.
-
-## [1.0.0] - 22/02/2025
-
-### Added
-- Add new version of the project.
-
-[1.1.2]: https://github.com/TODOvue/todovue-button/pull/11/files
-[1.1.1]: https://github.com/TODOvue/todovue-button/pull/10/files
-[1.1.0]: https://github.com/TODOvue/todovue-button/pull/9/files
-[1.0.3]: https://github.com/TODOvue/todovue-button/pull/6/files
-[1.0.2]: https://github.com/TODOvue/todovue-button/pull/5/files
-[1.0.1]: https://github.com/TODOvue/todovue-button/pull/4/files
-[1.0.0]: https://github.com/TODOvue/todovue-button/pull/2/files
+---
+[1.0.0]: https://github.com/TODOvue/tv-button/pull/12/files
