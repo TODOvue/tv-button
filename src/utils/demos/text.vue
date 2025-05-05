@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import TvButton from '@todovue/tvbutton';
+import TvButton from '@todovue/tv-button';
 
 const customStyle = ref({
   color: "#ffffff",

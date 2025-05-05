@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import TvButton from '@todovue/tvbutton';
+import TvButton from '@todovue/tv-button';
 
 const clickHandler = () => {
   console.log('clicked');
