@@ -5,6 +5,14 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
+## [1.1.0] - 2025-05-08
+### ✨ Added
+- Add icon-only button support with styling and documentation updates
+- Add loading state support with spinner and update documentation
+
+### 🐛 Fixed
+- Fixed button layout and icon positioning
+- Fixed tv-btn-text styles for improved accessibility and hover effects
 
 ## [1.0.0] - 2025-05-05
 
@@ -30,4 +38,5 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 
 ---
+[1.1.0]: https://github.com/TODOvue/tv-button/pull/13/files
 [1.0.0]: https://github.com/TODOvue/tv-button/pull/12/files

@@ -80,9 +80,11 @@ const handleClick = () => {
 | `isDisabled` or `disabled` | Boolean | `false`  | If `true`, the button will be disabled.                                            |
 | `isText` or `text`         | Boolean | `false`  | If `true`, the button will be styled as a text button.                             |
 | icon                       | String  | `null`   | The name of the icon to be displayed inside the button.                            |
+| iconOnly                   | Boolean | `false`  | If `true`, shows only the icon without background or padding (pure icon button).   |
 | iconPosition               | String  | `right`  | The position of the icon (`left` or `right`).                                      |
 | buttonText                 | String  | `''`     | The text inside the button (alternative to using `slot`).                          |
 | ariaLabel                  | String  | `''`     | The aria-label attribute for the button.                                           |
+| `isLoading` or `loading`   | Boolean | `false`  | If `true`, replaces content with a spinner and disables the button.                |
 
 ---
 
@@ -166,6 +168,14 @@ If you want a button with only an icon, use `type="icon"`. The button will autom
 <tv-button icon="check" type="icon"/>
 <tv-button icon="info" type="icon" />
 ```
+
+If you want to display just the SVG icon with no background, border, or padding at all (like an inline action icon), use the `iconOnly` prop:
+
+```html
+<tv-button icon="edit" type="icon" :iconOnly="true" />
+```
+
+This is useful for icon buttons that behave like plain clickable icons.
 
 ---
 

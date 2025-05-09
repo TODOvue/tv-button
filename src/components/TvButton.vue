@@ -26,6 +26,8 @@ const props = defineProps({
   isSuccess: Boolean,
   isText: Boolean,
   isWarning: Boolean,
+  isLoading: Boolean,
+  iconOnly: Boolean,
   type: {
     type: String,
     default: 'button',
@@ -43,12 +45,14 @@ const props = defineProps({
   success: Boolean,
   text: Boolean,
   warning: Boolean,
+  loading: Boolean,
 });
 
 const icons = import.meta.glob("../assets/icons/*.svg", { eager: true, query: "?raw", import: "default" });
 const emit = defineEmits(['clickButton', 'click']);
 
 const iconContent = computed(() => icons[`../assets/icons/${props.icon}.svg`] || "");
+const spinner = icons['../assets/icons/loading.svg'] || '';
 
 const {
   buttonClasses,
@@ -70,7 +74,7 @@ const buttonStyles = computed(() => ({
   <button
     :aria-label="ariaLabel"
     :class="buttonClasses"
-    :disabled="isDisabled"
+    :disabled="isDisabled || isLoading || disabled || loading"
     :role="type"
     :style="buttonStyles"
     :type="type"
@@ -79,14 +83,29 @@ const buttonStyles = computed(() => ({
     @mouseover="manageHover(true)"
     class="tv-btn"
   >
-    <span
-      :class="[`tv-icon-position-${iconPosition}`]"
-      class="tv-icon"
-      v-html="iconContent"
-      v-if="icon"
-    />
-    <template v-if="buttonText">{{ buttonText }}</template>
-    <slot v-else></slot>
+    <span class="tv-btn-content">
+      <span
+        v-if="isLoading || loading"
+        class="tv-spinner"
+        v-html="spinner"
+      />
+      <template v-else>
+        <span
+          v-if="icon && iconPosition === 'left'"
+          class="tv-icon icon-left"
+          v-html="iconContent"
+        />
+        <span class="tv-btn-text">
+          <template v-if="buttonText">{{ buttonText }}</template>
+          <slot v-else></slot>
+        </span>
+        <span
+            v-if="icon && iconPosition === 'right'"
+            class="tv-icon icon-right"
+            v-html="iconContent"
+        />
+      </template>
+    </span>
   </button>
 </template>
 

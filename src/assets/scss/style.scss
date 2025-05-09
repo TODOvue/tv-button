@@ -5,6 +5,35 @@
 
 .tv-btn {
   @include mixins.defaultButton();
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  .tv-btn-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tv-btn-text {
+    display: inline-block;
+    line-height: 1;
+  }
+
+  .tv-icon {
+    @include mixins.defaultIconSize(18px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-left {
+    margin-right: 8px;
+  }
+
+  .icon-right {
+    margin-left: 8px;
+  }
 
   &.tv-btn-full {
     width: 100%;
@@ -53,20 +82,37 @@
       variables.$info-bg
     );
   }
+
   &.tv-btn-text {
-    @include mixins.buttonText(transparent, variables.$dark-text);
-    padding: 0.8rem 1.2rem;
+    background-color: transparent;
+    color: variables.$dark-text;
+    border: none;
+    padding: 0.5rem 0.75rem;
     min-width: unset;
+    font-weight: 500;
+    font-size: 14px;
     width: auto;
-    transition: background 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none;
 
     &:hover {
-      @include mixins.backgroundColorAndTextColor(transparent, color.adjust(variables.$dark-text, $lightness: -10%));
+      background-color: rgba(0, 0, 0, 0.05);
+      color: color.adjust(variables.$dark-text, $lightness: -10%);
+      text-decoration: none;
     }
 
     &:active {
-      @include mixins.backgroundColorAndTextColor(transparent, color.adjust(variables.$dark-text, $lightness: -15%));
+      background-color: rgba(0, 0, 0, 0.1);
+      color: color.adjust(variables.$dark-text, $lightness: -15%);
       transform: scale(0.98);
+    }
+
+    &.tv-btn-disabled {
+      color: color.adjust(variables.$dark-text, $lightness: 40%);
+      background-color: transparent;
+      opacity: 0.6;
+      cursor: not-allowed;
+      pointer-events: none;
     }
   }
 
@@ -77,4 +123,55 @@
       variables.$dark-button-bg
     );
   }
+
+  &.tv-btn-icon-only {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: unset;
+    min-height: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    &.tv-icon {
+      @include mixins.defaultIconSize(20px); // Puedes ajustar el tamaño
+      margin: 0;
+      color: variables.$dark-text;
+    }
+
+    &:hover .tv-icon {
+      color: color.adjust(variables.$dark-text, $lightness: -20%);
+      transform: scale(1.1);
+    }
+
+    &:active .tv-icon {
+      transform: scale(0.95);
+    }
+
+    &.tv-btn-disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+  .tv-spinner {
+    @include mixins.defaultIconSize(18px);
+    animation: spin 1s linear infinite;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: currentColor;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
 }
