@@ -32,6 +32,7 @@ const useButton = (props, emit) => {
     'tv-btn-disabled': props.isDisabled || props.disabled,
     'tv-btn-text': props.isText || props.text,
     'tv-btn-icon': props.type === 'icon',
+    'tv-btn-icon-only':  props.type === 'icon' && props.iconOnly,
   }));
   
   const buttonStyleCustom = computed(() => {

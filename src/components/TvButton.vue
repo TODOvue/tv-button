@@ -43,6 +43,7 @@ const props = defineProps({
   success: Boolean,
   text: Boolean,
   warning: Boolean,
+  iconOnly: Boolean,
 });
 
 const icons = import.meta.glob("../assets/icons/*.svg", { eager: true, query: "?raw", import: "default" });

@@ -123,4 +123,38 @@
       variables.$dark-button-bg
     );
   }
+
+  &.tv-btn-icon-only {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: unset;
+    min-height: unset;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+    &.tv-icon {
+      @include mixins.defaultIconSize(20px); // Puedes ajustar el tamaño
+      margin: 0;
+      color: variables.$dark-text;
+    }
+
+    &:hover .tv-icon {
+      color: color.adjust(variables.$dark-text, $lightness: -20%);
+      transform: scale(1.1);
+    }
+
+    &:active .tv-icon {
+      transform: scale(0.95);
+    }
+
+    &.tv-btn-disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
 }

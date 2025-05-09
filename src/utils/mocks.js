@@ -23,19 +23,13 @@ import Various2 from "./demos/various2.vue?raw";
 import Various3 from "./demos/various3.vue?raw";
 import Various4 from "./demos/various4.vue?raw";
 import Various5 from "./demos/various5.vue?raw";
+import IconOnly from "./demos/iconOnly.vue?raw";
 
 const clickHandler = () => {
   console.log("clicked");
 };
 
 export const demos = [
-  {
-    id: 1,
-    title: "Default",
-    propsData: { buttonText: "Default Buton Large", onClick: clickHandler, icon: 'alert' },
-    description: "Default button with default props.",
-    html: Default,
-  },
   {
     id: 1,
     title: "Default",
@@ -250,6 +244,18 @@ export const demos = [
     },
     description: "Default button with type icon outlined.",
     html: TypeIcon,
+  },
+  {
+    id: 27,
+    title: "Type Icon and icon only (star)",
+    propsData: {
+      type: "icon",
+      icon: "star",
+      iconOnly: true,
+      onClick: clickHandler,
+    },
+    description: "Default button with type icon and icon only.",
+    html: IconOnly,
   },
   {
     id: 19,
