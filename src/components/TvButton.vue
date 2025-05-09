@@ -79,14 +79,22 @@ const buttonStyles = computed(() => ({
     @mouseover="manageHover(true)"
     class="tv-btn"
   >
-    <span
-      :class="[`tv-icon-position-${iconPosition}`]"
-      class="tv-icon"
-      v-html="iconContent"
-      v-if="icon"
-    />
-    <template v-if="buttonText">{{ buttonText }}</template>
-    <slot v-else></slot>
+    <span class="tv-btn-content">
+      <span
+        v-if="icon && iconPosition === 'left'"
+        class="tv-icon icon-left"
+        v-html="iconContent"
+      />
+      <span class="tv-btn-text">
+        <template v-if="buttonText">{{ buttonText }}</template>
+        <slot v-else></slot>
+      </span>
+      <span
+        v-if="icon && iconPosition === 'right'"
+        class="tv-icon icon-right"
+        v-html="iconContent"
+      />
+    </span>
   </button>
 </template>
 

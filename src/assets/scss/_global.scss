@@ -13,11 +13,13 @@
 }
 
 .tv-icon-position-left {
-  @include mixins.floatIcon(left, right, 8px);
+  @include mixins.floatIcon(left);
+  margin-right: 8px;
 }
 
 .tv-icon-position-right {
-  @include mixins.floatIcon(right, left, 8px);
+  @include mixins.floatIcon(right);
+  margin-left: 8px;
 }
 
 .tv-btn-icon {

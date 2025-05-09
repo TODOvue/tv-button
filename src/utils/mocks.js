@@ -32,6 +32,13 @@ export const demos = [
   {
     id: 1,
     title: "Default",
+    propsData: { buttonText: "Default Buton Large", onClick: clickHandler, icon: 'alert' },
+    description: "Default button with default props.",
+    html: Default,
+  },
+  {
+    id: 1,
+    title: "Default",
     propsData: { buttonText: "Default", onClick: clickHandler },
     description: "Default button with default props.",
     html: Default,
