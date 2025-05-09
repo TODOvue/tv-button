@@ -84,19 +84,35 @@
   }
 
   &.tv-btn-text {
-    @include mixins.buttonText(transparent, variables.$dark-text);
-    padding: 0.8rem 1.2rem;
+    background-color: transparent;
+    color: variables.$dark-text;
+    border: none;
+    padding: 0.5rem 0.75rem;
     min-width: unset;
+    font-weight: 500;
+    font-size: 14px;
     width: auto;
-    transition: background 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none;
 
     &:hover {
-      @include mixins.backgroundColorAndTextColor(transparent, color.adjust(variables.$dark-text, $lightness: -10%));
+      background-color: rgba(0, 0, 0, 0.05);
+      color: color.adjust(variables.$dark-text, $lightness: -10%);
+      text-decoration: none;
     }
 
     &:active {
-      @include mixins.backgroundColorAndTextColor( transparent, color.adjust(variables.$dark-text, $lightness: -15%));
+      background-color: rgba(0, 0, 0, 0.1);
+      color: color.adjust(variables.$dark-text, $lightness: -15%);
       transform: scale(0.98);
+    }
+
+    &.tv-btn-disabled {
+      color: color.adjust(variables.$dark-text, $lightness: 40%);
+      background-color: transparent;
+      opacity: 0.6;
+      cursor: not-allowed;
+      pointer-events: none;
     }
   }
 
