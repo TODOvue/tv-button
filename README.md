@@ -84,6 +84,7 @@ const handleClick = () => {
 | iconPosition               | String  | `right`  | The position of the icon (`left` or `right`).                                      |
 | buttonText                 | String  | `''`     | The text inside the button (alternative to using `slot`).                          |
 | ariaLabel                  | String  | `''`     | The aria-label attribute for the button.                                           |
+| `isLoading` or `loading`   | Boolean | `false`  | If `true`, replaces content with a spinner and disables the button.                |
 
 ---
 

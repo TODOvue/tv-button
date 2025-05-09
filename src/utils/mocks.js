@@ -24,6 +24,7 @@ import Various3 from "./demos/various3.vue?raw";
 import Various4 from "./demos/various4.vue?raw";
 import Various5 from "./demos/various5.vue?raw";
 import IconOnly from "./demos/iconOnly.vue?raw";
+import Loading from "./demos/loading.vue?raw";
 
 const clickHandler = () => {
   console.log("clicked");
@@ -102,6 +103,17 @@ export const demos = [
     },
     description: "Default button with custom style when is outlined.",
     html: CustomStyleOutlined,
+  },
+  {
+    id: 29,
+    title: "Loading",
+    propsData: {
+      buttonText: "Default",
+      isLoading: true,
+      onClick: clickHandler
+    },
+    description: "Default button with loading state.",
+    html: Loading,
   },
   {
     id: 9,

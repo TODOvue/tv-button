@@ -29,7 +29,7 @@ const useButton = (props, emit) => {
     'tv-btn-info': props.isInfo || props.info,
     'tv-btn-warning': props.isWarning || props.warning,
     'tv-btn-error': props.isError || props.error,
-    'tv-btn-disabled': props.isDisabled || props.disabled,
+    'tv-btn-disabled': props.isDisabled || props.disabled || props.loading || props.isLoading,
     'tv-btn-text': props.isText || props.text,
     'tv-btn-icon': props.type === 'icon',
     'tv-btn-icon-only':  props.type === 'icon' && props.iconOnly,
