@@ -56,11 +56,6 @@ Using pnpm:
 pnpm add @todovue/tv-button
 ```
 
-Import the CSS (required to get styles):
-```js
-import '@todovue/tv-button/style.css'
-```
-
 ---
 ## Quick Start (SPA)
 Global registration (main.js / main.ts):
@@ -68,7 +63,6 @@ Global registration (main.js / main.ts):
 import { createApp } from 'vue'
 import App from './App.vue'
 import TvButton from '@todovue/tv-button'
-import '@todovue/tv-button/style.css'
 
 createApp(App)
   .use(TvButton) // enables <TvButton /> globally
@@ -78,7 +72,6 @@ Local import inside a component:
 ```vue
 <script setup>
 import { TvButton } from '@todovue/tv-button'
-import '@todovue/tv-button/style.css'
 
 function onSubmit() {
   console.log('Clicked')
@@ -96,7 +89,6 @@ Create a plugin file: `plugins/tv-button.client.ts` (client-only is fine, or wit
 ```ts
 import { defineNuxtPlugin } from '#app'
 import TvButton from '@todovue/tv-button'
-import '@todovue/tv-button/style.css'
 
 export default defineNuxtPlugin(nuxtApp => {
   nuxtApp.vueApp.use(TvButton)
@@ -110,54 +102,53 @@ Optional direct import (no plugin):
 ```vue
 <script setup>
 import { TvButton } from '@todovue/tv-button'
-import '@todovue/tv-button/style.css'
 </script>
 ```
 
 ---
 ## Component Registration Options
-| Approach | When to use |
-|----------|-------------|
-| Global via `app.use(TvButton)` | Many usages across app / design system install |
-| Local named import `{ TvButton }` | Isolated / code-split contexts |
-| Direct default import `import TvButton from '@todovue/tv-button'` | Single usage or manual registration |
+| Approach                                                          | When to use                                    |
+|-------------------------------------------------------------------|------------------------------------------------|
+| Global via `app.use(TvButton)`                                    | Many usages across app / design system install |
+| Local named import `{ TvButton }`                                 | Isolated / code-split contexts                 |
+| Direct default import `import TvButton from '@todovue/tv-button'` | Single usage or manual registration            |
 
 ---
 ## Props
 All boolean style props have two interchangeable forms: a long form (`isSomething`) and a short alias.
 
-| Prop | Aliases | Type | Default | Description |
-|------|---------|------|---------|-------------|
-| buttonText | — | string | '' | Optional text (alternative to slot). |
-| customStyle | — | object | {} | Inline style overrides (`{ backgroundColor, color }`). |
-| icon | — | string | null | Name of bundled icon. |
-| iconColor | — | string | 'white' | Declared but currently not applied (see Roadmap). |
-| iconPosition | — | 'left' \| 'right' | 'right' | Icon position relative to text. |
-| type | — | 'button' \| 'icon' | 'button' | Variant selector AND passed to native `type` attribute (see note below). |
-| ariaLabel | — | string | '' | Accessibility label (required if no text / icon-only). |
-| iconOnly | — | boolean | false | Renders only the icon (no padding/background). |
-| isOutlined | outlined | boolean | false | Outlined style. |
-| isSmall | small | boolean | false | Small size. |
-| isLarge | large | boolean | false | Large size. |
-| isSuccess | success | boolean | false | Success variant. |
-| isInfo | info | boolean | false | Info variant. |
-| isWarning | warning | boolean | false | Warning variant. |
-| isError | error | boolean | false | Error variant. |
-| isDisabled | disabled | boolean | false | Disables interaction. |
-| isText | text | boolean | false | Text (minimal) style. |
-| isFull | full | boolean | false | Full width. |
-| isRounded | rounded | boolean | false | Rounded corners. |
-| isLoading | loading | boolean | false | Shows spinner & disables. |
-| isCircle | circle | boolean | false | Currently unused (placeholder). |
+| Prop         | Aliases  | Type               | Default  | Description                                                              |
+|--------------|----------|--------------------|----------|--------------------------------------------------------------------------|
+| buttonText   | —        | string             | ''       | Optional text (alternative to slot).                                     |
+| customStyle  | —        | object             | {}       | Inline style overrides (`{ backgroundColor, color }`).                   |
+| icon         | —        | string             | null     | Name of bundled icon.                                                    |
+| iconColor    | —        | string             | 'white'  | Declared but currently not applied (see Roadmap).                        |
+| iconPosition | —        | 'left' \| 'right'  | 'right'  | Icon position relative to text.                                          |
+| type         | —        | 'button' \| 'icon' | 'button' | Variant selector AND passed to native `type` attribute (see note below). |
+| ariaLabel    | —        | string             | ''       | Accessibility label (required if no text / icon-only).                   |
+| iconOnly     | —        | boolean            | false    | Renders only the icon (no padding/background).                           |
+| isOutlined   | outlined | boolean            | false    | Outlined style.                                                          |
+| isSmall      | small    | boolean            | false    | Small size.                                                              |
+| isLarge      | large    | boolean            | false    | Large size.                                                              |
+| isSuccess    | success  | boolean            | false    | Success variant.                                                         |
+| isInfo       | info     | boolean            | false    | Info variant.                                                            |
+| isWarning    | warning  | boolean            | false    | Warning variant.                                                         |
+| isError      | error    | boolean            | false    | Error variant.                                                           |
+| isDisabled   | disabled | boolean            | false    | Disables interaction.                                                    |
+| isText       | text     | boolean            | false    | Text (minimal) style.                                                    |
+| isFull       | full     | boolean            | false    | Full width.                                                              |
+| isRounded    | rounded  | boolean            | false    | Rounded corners.                                                         |
+| isLoading    | loading  | boolean            | false    | Shows spinner & disables.                                                |
+| isCircle     | circle   | boolean            | false    | Currently unused (placeholder).                                          |
 
 > Note: Because `type` is bound to the native `<button type="...">`, using `type="icon"` produces a non-standard button attribute. This does not break rendering but is semantically incorrect in forms. A future release will introduce `variant` and keep `htmlType` separate (see Roadmap).
 
 ---
 ## Events
-| Event name (kebab) | Emits (camel) | Description |
-|--------------------|---------------|-------------|
-| `click-button` | `clickButton` | Custom semantic click event. |
-| `click` | `click` | Native passthrough (also emitted manually). |
+| Event name (kebab) | Emits (camel) | Description                                 |
+|--------------------|---------------|---------------------------------------------|
+| `click-button`     | `clickButton` | Custom semantic click event.                |
+| `click`            | `click`       | Native passthrough (also emitted manually). |
 
 Usage:
 ```vue
@@ -212,19 +203,19 @@ Loading state:
 ---
 ## SSR Notes
 - No direct DOM (`window` / `document`) access in source → safe for SSR.
-- Styles emitted as a separate CSS file (`style.css`) in library build → ideal for Nuxt 3.
+- Styles are now applied automatically when you import the library (no manual CSS import required).
 - SVG icons are bundled via Vite's `import.meta.glob` (works in Vite + Nuxt).
 - Ensure you import `@todovue/tv-button/style.css` in an SSR-compatible entry (plugin or layout).
 
 ---
 ## Roadmap
-| Item | Status |
-|------|--------|
-| Separate `type` into `variant` + `htmlType` | Planned |
-| Implement `iconColor` application | Planned |
-| Implement `isCircle` styling | Planned |
-| Add theming API (CSS vars) | Considering |
-| Add ARIA improvements for loading state | Considering |
+| Item                                        | Status      |
+|---------------------------------------------|-------------|
+| Separate `type` into `variant` + `htmlType` | Planned     |
+| Implement `iconColor` application           | Planned     |
+| Implement `isCircle` styling                | Planned     |
+| Add theming API (CSS vars)                  | Considering |
+| Add ARIA improvements for loading state     | Considering |
 
 ---
 ## Development
