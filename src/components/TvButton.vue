@@ -75,7 +75,6 @@ const buttonStyles = computed(() => ({
     :aria-label="ariaLabel"
     :class="buttonClasses"
     :disabled="isDisabled || isLoading || disabled || loading"
-    :role="type"
     :style="buttonStyles"
     :type="type"
     @click="handleClick"
@@ -100,9 +99,9 @@ const buttonStyles = computed(() => ({
           <slot v-else></slot>
         </span>
         <span
-            v-if="icon && iconPosition === 'right'"
-            class="tv-icon icon-right"
-            v-html="iconContent"
+          v-if="icon && iconPosition === 'right'"
+          class="tv-icon icon-right"
+          v-html="iconContent"
         />
       </template>
     </span>
