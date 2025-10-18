@@ -5,6 +5,22 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
+## [1.1.1] - 2025-10-17
+### 🛠️ Changed
+- The library build now uses `src/entry.ts` (exports both the component and the plugin) instead of directly exporting the `.vue` file.
+- CSS injection via JS has been removed for the library build (it is only kept for the demo), generating a `tv-button.css` file optimized for SSR/Nuxt.
+- Changed node-version to workflows release.yml to 20.
+
+### ✨ Added
+- Plugin installation support: `app.use(TvButton)` or `app.use(TvButtonPlugin)`.
+- Explicit export of the style file: `import '@todovue/tv-button/style.css'`.
+- Documentation for usage in SSR and Nuxt 3 applications.
+
+### 📦 Dependencies
+- `package.json` exposes `style`, `sideEffects`, and the export of `./style.css` for safe tree-shaking.
+- Updated Vite to `^7.0.0` to ensure compatibility with Node.js 20.19+.
+- Updated @vitejs/plugin-vue to `^6.0.0`.
+
 ## [1.1.0] - 2025-05-08
 ### ✨ Added
 - Add icon-only button support with styling and documentation updates
@@ -38,5 +54,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 
 ---
+[1.1.1]: https://github.com/TODOvue/tv-button/pull/15/files
 [1.1.0]: https://github.com/TODOvue/tv-button/pull/13/files
 [1.0.0]: https://github.com/TODOvue/tv-button/pull/12/files

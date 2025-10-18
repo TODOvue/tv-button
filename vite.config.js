@@ -7,7 +7,7 @@ const isDemo = process.env.VITE_BUILD_TARGET === "demo";
 export default defineConfig({
   plugins: [
     vue(),
-    cssInjectedByJsPlugin(),
+    ...(isDemo ? [cssInjectedByJsPlugin()] : []),
     dts({
       insertTypesEntry: true,
       outputDir: "dist",
@@ -21,7 +21,7 @@ export default defineConfig({
     }
     : {
       lib: {
-        entry: "src/components/TvButton.vue",
+        entry: "src/entry.ts",
         name: "TvButton",
         fileName: format => `tv-button.${format}.js`,
         formats: ["es", "cjs"]
@@ -31,7 +31,8 @@ export default defineConfig({
         output: {
           globals: {
             vue: "Vue"
-          }
+          },
+          exports: 'named'
         }
       }
     },
