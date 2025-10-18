@@ -29,8 +29,7 @@
     ".": {
       "import": "./dist/tv-button.es.js",
       "require": "./dist/tv-button.cjs.js"
-    },
-    "./style.css": "./dist/tv-button.css"
+    }
   },
   "main": "dist/tv-button.cjs.js",
   "module": "dist/tv-button.es.js",

@@ -7,7 +7,7 @@ const isDemo = process.env.VITE_BUILD_TARGET === "demo";
 export default defineConfig({
   plugins: [
     vue(),
-    ...(isDemo ? [cssInjectedByJsPlugin()] : []),
+    cssInjectedByJsPlugin(),
     dts({
       insertTypesEntry: true,
       outputDir: "dist",
