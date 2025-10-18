@@ -205,7 +205,6 @@ Loading state:
 - No direct DOM (`window` / `document`) access in source → safe for SSR.
 - Styles are now applied automatically when you import the library (no manual CSS import required).
 - SVG icons are bundled via Vite's `import.meta.glob` (works in Vite + Nuxt).
-- Ensure you import `@todovue/tv-button/style.css` in an SSR-compatible entry (plugin or layout).
 
 ---
 ## Roadmap
