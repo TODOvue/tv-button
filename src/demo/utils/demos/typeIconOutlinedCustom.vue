@@ -11,6 +11,7 @@
 <script setup>
 import { ref } from 'vue';
 import TvButton from '@todovue/tv-button';
+import '@todovue/tv-button/style.css';
 
 const customStyle = ref({
   backgroundColor: '#5f31b7',
