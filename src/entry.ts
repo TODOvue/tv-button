@@ -1,5 +1,5 @@
-import './style.css';
 import TvButton from './components/TvButton.vue'
+import './style.scss'
 
 (TvButton as any).install = (app: any) => {
   app.component('TvButton', TvButton)
