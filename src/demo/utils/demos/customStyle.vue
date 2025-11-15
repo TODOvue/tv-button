@@ -1,18 +1,20 @@
 <template>
   <tv-button
-    text
     :customStyle="customStyle"
-    @click="clickHandler"
+    @click-button="clickHandler"
   >
-    Text
+    Custom Style
   </tv-button>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import TvButton from '@todovue/tv-button';
+import '@todovue/tv-button/style.css';
 
 const customStyle = ref({
-  color: "#ffffff",
+  backgroundColor: '#0f2e5b',
+  color: '#fff',
 });
 
 const clickHandler = () => {

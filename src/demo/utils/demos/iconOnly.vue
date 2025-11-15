@@ -1,14 +1,15 @@
 <template>
   <tv-button
-    error
+    icon="star"
+    type="icon"
+    icon-only
     @click="clickHandler"
-  >
-    Error
-  </tv-button>
+  />
 </template>
 
 <script setup>
 import TvButton from '@todovue/tv-button';
+import '@todovue/tv-button/style.css';
 
 const clickHandler = () => {
   console.log('clicked');

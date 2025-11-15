@@ -1,14 +1,13 @@
 <template>
   <tv-button
-    rounded
+    buttonText="Default Props"
     @click="clickHandler"
-  >
-    Rounded
-  </tv-button>
+  />
 </template>
 
 <script setup>
 import TvButton from '@todovue/tv-button';
+import '@todovue/tv-button/style.css';
 
 const clickHandler = () => {
   console.log('clicked');

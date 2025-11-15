@@ -1,11 +1,15 @@
 <template>
-  <tv-button @click="clickHandler">
-    Default
+  <tv-button
+    small
+    @click="clickHandler"
+  >
+    Small
   </tv-button>
 </template>
 
 <script setup>
 import TvButton from '@todovue/tv-button';
+import '@todovue/tv-button/style.css';
 
 const clickHandler = () => {
   console.log('clicked');

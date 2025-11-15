@@ -29,14 +29,17 @@
     ".": {
       "import": "./dist/tv-button.es.js",
       "require": "./dist/tv-button.cjs.js"
-    }
+    },
+    "./style.css": "./dist/tv-button.css"
   },
   "main": "dist/tv-button.cjs.js",
   "module": "dist/tv-button.es.js",
   "types": "dist/tv-button.d.ts",
   "style": "dist/tv-button.css",
   "sideEffects": [
-    "*.css"
+    "*.css",
+    "*.scss",
+    "dist/*.css"
   ],
   "files": [
     "dist",
@@ -59,7 +62,6 @@
     "@vitejs/plugin-vue": "^6.0.0",
     "sass": "^1.0.0",
     "vite": "^7.0.0",
-    "vite-plugin-css-injected-by-js": "^3.0.0",
     "vite-plugin-dts": "^4.0.0"
   }
 }

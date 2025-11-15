@@ -1,21 +1,15 @@
 <template>
   <tv-button
-    :customStyle="customStyle"
-    outlined
+    error
     @click="clickHandler"
   >
-    Is outlined
+    Error
   </tv-button>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import TvButton from '@todovue/tv-button';
-
-const customStyle = ref({
-  backgroundColor: '#5f31b7',
-  color: '#fff', // The color will be used for the hover.
-});
+import '@todovue/tv-button/style.css';
 
 const clickHandler = () => {
   console.log('clicked');
