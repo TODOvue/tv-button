@@ -4,6 +4,13 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.2.1] - 2025-11-20
+
+### Fixed
+- Fixed missing export of `nux.js` file in the package.
+- Create `global.d.ts` to declare module for TypeScript users.
+- Create `tsconfig.json` for proper type checking during build.
+
 ## [1.2.0] - 2025-11-20
 
 ### Dependencies
@@ -77,6 +84,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Ready-to-use as a standalone or global Vue component.
 - Scoped styles using SCSS.
 
+[1.2.1]: https://github.com/TODOvue/tv-button/pull/19/files
 [1.2.0]: https://github.com/TODOvue/tv-button/pull/18/files
 [1.1.3]: https://github.com/TODOvue/tv-button/pull/17/files
 [1.1.2]: https://github.com/TODOvue/tv-button/pull/16/files

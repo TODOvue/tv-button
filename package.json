@@ -45,7 +45,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "nuxt.js"
   ],
   "engines": {
     "node": ">=20.19.0"
