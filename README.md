@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue Button (TvButton)
@@ -114,7 +114,9 @@ app.mount('#app')
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-  css: ['@todovue/tv-button/style.css'],
+  modules: [
+    '@todovue/tv-button/nuxt'
+  ]
 })
 ```
 
@@ -194,7 +196,7 @@ Usage:
 ---
 ## Icons
 Set with the `icon` prop. Available names:
-`account`, `add-user`, `alert`, `arrow-down`, `arrow-left`, `arrow-right`, `arrow-up`, `block`, `calendar`, `cancel`, `check`, `clone`, `dark`, `download`, `edit`, `external-link`, `favorite`, `filter`, `help`, `info`, `light`, `loading`, `lock`, `login`, `logout`, `menu`, `minus`, `notification`, `plus`, `remove`, `search`, `settings`, `share`, `star`, `todovue`, `unlock`, `update`, `view`.
+`account`, `add-user`, `alert`, `arrow-down`, `arrow-left`, `arrow-right`, `arrow-up`, `block`, `calendar`, `cancel`, `check`, `clone`, `dark`, `download`, `edit`, `external-link`, `favorite`, `filter`, `help`, `info`, `light`, `loading`, `lock`, `login`, `logout`, `menu`, `minus`, `notification`, `plus`, `remove`, `search`, `settings`, `share`, `star`, `todovue`, `unlock`, `update`, `view` `double-arrow-left`, `double-arrow-right`, `home`, `dots-vertical`, `eye-off`, `trash`, `upload`.
 
 Example:
 ```vue
