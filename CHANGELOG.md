@@ -77,7 +77,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Ready-to-use as a standalone or global Vue component.
 - Scoped styles using SCSS.
 
----
+[1.2.0]: https://github.com/TODOvue/tv-button/pull/18/files
 [1.1.3]: https://github.com/TODOvue/tv-button/pull/17/files
 [1.1.2]: https://github.com/TODOvue/tv-button/pull/16/files
 [1.1.1]: https://github.com/TODOvue/tv-button/pull/15/files
