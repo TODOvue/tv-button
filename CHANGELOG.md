@@ -4,6 +4,11 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.2.2] - 2025-11-21
+
+### Fixed
+- Prevent duplicate CSS import for TvButton
+
 ## [1.2.1] - 2025-11-20
 
 ### Fixed
@@ -84,6 +89,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Ready-to-use as a standalone or global Vue component.
 - Scoped styles using SCSS.
 
+[1.2.2]: https://github.com/TODOvue/tv-button/pull/20/files
 [1.2.1]: https://github.com/TODOvue/tv-button/pull/19/files
 [1.2.0]: https://github.com/TODOvue/tv-button/pull/18/files
 [1.1.3]: https://github.com/TODOvue/tv-button/pull/17/files

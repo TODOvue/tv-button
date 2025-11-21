@@ -6,6 +6,9 @@ export default defineNuxtModule({
     configKey: 'tvButton'
   },
   setup(_options, nuxt) {
-    nuxt.options.css.push('@todovue/tv-button/style.css')
+    const cssPath = '@todovue/tv-button/style.css';
+    if (!nuxt.options.css.includes(cssPath)) {
+      nuxt.options.css.push(cssPath);
+    }
   }
 })
