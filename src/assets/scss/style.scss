@@ -44,11 +44,11 @@
   }
 
   &.tv-btn-small {
-    @include mixins.buttonSize(80px, auto, 12px, 0.6rem 0);
+    @include mixins.buttonSize(80px, auto, 12px, 0.6rem 1rem);
   }
 
   &.tv-btn-large {
-    @include mixins.buttonSize(150px, auto, 15px, 1rem 0);
+    @include mixins.buttonSize(150px, auto, 15px, 1rem 1.5rem);
   }
 
   &.tv-btn-success {
