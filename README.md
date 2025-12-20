@@ -5,7 +5,6 @@
 A flexible, framework‑agnostic Vue 3 button component with variants, sizes, icons, loading state, and customization utilities. Ship it in Single Page Apps or Server-Side Rendered (SSR) environments (e.g. Nuxt 3) with zero DOM assumptions.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-button.svg)](https://www.npmjs.com/package/@todovue/tv-button)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3c413109-63aa-41d7-8126-a527435f5512/deploy-status)](https://app.netlify.com/projects/tv-button/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-button.svg)](https://www.npmjs.com/package/@todovue/tv-button)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-button.svg)](https://www.npmjs.com/package/@todovue/tv-button)
 ![License](https://img.shields.io/github/license/TODOvue/tv-button)
@@ -15,7 +14,7 @@ A flexible, framework‑agnostic Vue 3 button component with variants, sizes, ic
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-button)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-button?style=social)
 
-> Demo: https://tv-button.netlify.app/
+> Demo: https://ui.todovue.blog/button/
 
 ---
 ## Table of Contents
