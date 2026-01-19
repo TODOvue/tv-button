@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [unreleased] - 2026-01-19
 
+### Added
+- Add `dashboard`, `folder`, `image`, `link`, `mail`, `save` icons.
+
 ### Dependencies
 - Update `@todovue/tv-demo` to `^1.4.3`.
 - Update `sass` to `^1.97.2`.

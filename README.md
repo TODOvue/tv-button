@@ -195,7 +195,7 @@ Usage:
 ---
 ## Icons
 Set with the `icon` prop. Available names:
-`account`, `add-user`, `alert`, `arrow-down`, `arrow-left`, `arrow-right`, `arrow-up`, `block`, `calendar`, `cancel`, `check`, `clone`, `dark`, `download`, `edit`, `external-link`, `favorite`, `filter`, `help`, `info`, `light`, `loading`, `lock`, `login`, `logout`, `menu`, `minus`, `notification`, `plus`, `remove`, `search`, `settings`, `share`, `star`, `todovue`, `unlock`, `update`, `view` `double-arrow-left`, `double-arrow-right`, `home`, `dots-vertical`, `eye-off`, `trash`, `upload`.
+`account`, `add-user`, `alert`, `arrow-down`, `arrow-left`, `arrow-right`, `arrow-up`, `block`, `calendar`, `cancel`, `check`, `clone`, `dark`, `download`, `edit`, `external-link`, `favorite`, `filter`, `help`, `info`, `light`, `loading`, `lock`, `login`, `logout`, `menu`, `minus`, `notification`, `plus`, `remove`, `search`, `settings`, `share`, `star`, `todovue`, `unlock`, `update`, `view` `double-arrow-left`, `double-arrow-right`, `home`, `dots-vertical`, `eye-off`, `trash`, `upload`, `dashboard`, `folder`, `link`, `mail` and `save`.
 
 Example:
 ```vue
