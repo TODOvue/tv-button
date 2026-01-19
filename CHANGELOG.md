@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 - Add `dashboard`, `folder`, `image`, `link`, `mail`, `save` icons.
+- Added support for `href` and `to` properties to enable native link and client-side routing functionality within the component.
 
 ### Dependencies
 - Update `@todovue/tv-demo` to `^1.4.3`.

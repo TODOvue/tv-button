@@ -36,14 +36,25 @@ const props = defineProps({
     default: 'button',
   },
   ariaLabel: String,
+  to: [String, Object],
+  href: String,
+  target: String,
+  rel: String,
 });
+
 
 const icons = import.meta.glob("../assets/icons/*.svg", { query: "?raw", import: "default" });
 const emit = defineEmits(['clickButton', 'click']);
 
+const effectiveIcon = computed(() => {
+  if (props.icon) return props.icon;
+  if (props.target === '_blank') return 'external-link';
+  return null;
+});
+
 const IconComponent = computed(() => {
-  if (!props.icon) return null;
-  const iconPath = `../assets/icons/${props.icon}.svg`;
+  if (!effectiveIcon.value) return null;
+  const iconPath = `../assets/icons/${effectiveIcon.value}.svg`;
   if (!icons[iconPath]) return null;
 
   return defineAsyncComponent(async () => {
@@ -81,15 +92,28 @@ const buttonStyles = computed(() => ({
   ...buttonStyleCustom.value,
   ...(isHover.value ? buttonStyleHover.value : {}),
 }));
+
+const isLink = computed(() => !!(props.href || props.to));
+
+const componentTag = computed(() => {
+  if (props.to) return 'RouterLink';
+  if (props.href) return 'a';
+  return 'button';
+});
 </script>
 
 <template>
-  <button
+  <component
+    :is="componentTag"
+    :href="href"
+    :to="to"
+    :target="target"
+    :rel="rel"
     :aria-label="ariaLabel"
     :class="buttonClasses"
     :disabled="disabled || loading"
     :style="buttonStyles"
-    :type="type"
+    :type="!isLink ? type : undefined"
     @click="handleClick"
     @mouseleave="manageHover(false)"
     @mouseover="manageHover(true)"
@@ -100,7 +124,7 @@ const buttonStyles = computed(() => ({
         <SpinnerComponent />
       </Suspense>
       <template v-else>
-        <Suspense v-if="icon && iconPosition === 'left'">
+        <Suspense v-if="effectiveIcon && iconPosition === 'left'">
            <IconComponent class="tv-icon icon-left" />
         </Suspense>
 
@@ -109,12 +133,12 @@ const buttonStyles = computed(() => ({
           <slot v-else></slot>
         </span>
 
-        <Suspense v-if="icon && iconPosition === 'right'">
+        <Suspense v-if="effectiveIcon && iconPosition === 'right'">
           <IconComponent class="tv-icon icon-right" />
         </Suspense>
       </template>
     </span>
-  </button>
+  </component>
 </template>
 
 <style>
@@ -124,5 +148,8 @@ const buttonStyles = computed(() => ({
 }
 .tv-spinner svg {
   animation: spin 1s linear infinite;
+}
+a.tv-btn {
+  text-decoration: none;
 }
 </style>

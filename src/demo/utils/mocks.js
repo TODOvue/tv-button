@@ -24,6 +24,7 @@ import Various3 from "./demos/various3.vue?raw";
 import Various4 from "./demos/various4.vue?raw";
 import Various5 from "./demos/various5.vue?raw";
 import IconOnly from "./demos/iconOnly.vue?raw";
+import Link from "./demos/link.vue?raw";
 import Loading from "./demos/loading.vue?raw";
 
 const clickHandler = () => {
@@ -44,6 +45,18 @@ export const demos = [
     propsData: { buttonText: "Default Props" },
     description: "Default button with default props.",
     html: DefaultProps,
+  },
+  {
+    id: 28,
+    title: "External Link Button (href)",
+    propsData: {
+      buttonText: "External Link",
+      href: "https://todovue.blog",
+      target: "_blank",
+      onClick: clickHandler,
+    },
+    description: "Button acting as a link with href prop.",
+    html: Link,
   },
   {
     id: 3,

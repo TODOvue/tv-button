@@ -162,6 +162,10 @@ All boolean style props have two interchangeable forms: a long form (`isSomethin
 | loading      | boolean                                   | false     | Shows spinner & disables.                              |
 | full         | boolean                                   | false     | Full width.                                            |
 | text         | boolean                                   | false     | Text (minimal) style.                                  |
+| href         | string                                    | null      | URL for native anchor tag.                             |
+| to           | string \| object                          | null      | Route for RouterLink / NuxtLink.                       |
+| target       | string                                    | null      | Anchor target (e.g. '_blank').                         |
+| rel          | string                                    | null      | Anchor rel attribute.                                  |
 
 > Note: Because `type` is bound to the native `<button type="...">`, using `type="icon"` produces a non-standard button attribute. This does not break rendering but is semantically incorrect in forms. A future release will introduce `variant` and keep `htmlType` separate (see Roadmap).
 
@@ -210,6 +214,15 @@ Inline icon-only action (no background / padding):
 Loading state:
 ```vue
 <TvButton loading icon="download">Processing...</TvButton>
+```
+
+Link usage:
+```vue
+<!-- Native anchor -->
+<TvButton href="https://todovvue.blog" target="_blank">External Link</TvButton>
+
+<!-- Router link -->
+<TvButton to="/dashboard">Go to Dashboard</TvButton>
 ```
 
 ## Accessibility
