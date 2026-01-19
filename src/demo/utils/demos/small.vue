@@ -1,6 +1,6 @@
 <template>
   <tv-button
-    small
+    size="sm"
     @click="clickHandler"
   >
     Small

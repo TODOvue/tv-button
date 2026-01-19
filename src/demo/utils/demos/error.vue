@@ -1,6 +1,6 @@
 <template>
   <tv-button
-    error
+    variant="error"
     @click="clickHandler"
   >
     Error

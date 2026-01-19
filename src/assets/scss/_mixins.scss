@@ -76,11 +76,12 @@
     border: 1px solid transparent;
 
     &:hover {
-      @include backgroundColorAndTextColor(color.adjust($background-color, $lightness: 10%), color.adjust($background-color, $lightness: 90%));
+      background-color: rgba($background-color, 0.1);
+      color: $background-color;
     }
 
     &:active {
-      @include backgroundColorAndTextColor(transparent, color.adjust($background-color, $lightness: -15%));
+      background-color: rgba($background-color, 0.2);
       transform: none;
     }
   }

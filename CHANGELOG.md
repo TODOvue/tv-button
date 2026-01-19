@@ -4,6 +4,24 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.3.0] - 2026-01-19
+
+### Added
+- Add `dashboard`, `folder`, `image`, `link`, `mail`, `save` icons.
+- Added support for `href` and `to` properties to enable native link and client-side routing functionality within the component.
+
+### Dependencies
+- Update `@todovue/tv-demo` to `^1.4.3`.
+- Update `sass` to `^1.97.2`.
+- Update `vite` to `^7.3.1`.
+
+### Changed
+- Standardized button properties to ensure consistent API usage across the application.
+- Refactored the component structure to improve maintainability and code readability.
+- Updated the `README.md` documentation to reflect the standardization of button properties using `variant` and `size` terminology.
+- Simplified button mixins to streamline the styling architecture.
+- Improved hover and active states to enhance visual feedback and user interaction.
+
 ## [1.2.3] - 2025-12-19
 
 ### Added
@@ -105,6 +123,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Ready-to-use as a standalone or global Vue component.
 - Scoped styles using SCSS.
 
+[1.3.0]: https://github.com/TODOvue/tv-button/pull/22/files
+[1.2.3]: https://github.com/TODOvue/tv-button/pull/21/files
 [1.2.2]: https://github.com/TODOvue/tv-button/pull/20/files
 [1.2.1]: https://github.com/TODOvue/tv-button/pull/19/files
 [1.2.0]: https://github.com/TODOvue/tv-button/pull/18/files

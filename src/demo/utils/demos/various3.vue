@@ -1,7 +1,7 @@
 <template>
   <tv-button
     full
-    warning
+    variant="warning"
     rounded
     @click="clickHandler"
   >

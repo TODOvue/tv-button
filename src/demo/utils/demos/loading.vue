@@ -1,7 +1,7 @@
 <template>
   <tv-button
     @click="clickHandler"
-    is-loading
+    loading
   >
     Default
   </tv-button>

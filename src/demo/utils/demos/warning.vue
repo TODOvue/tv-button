@@ -1,6 +1,6 @@
 <template>
   <tv-button
-    warning
+    variant="warning"
     @click="clickHandler"
   >
     Warning
