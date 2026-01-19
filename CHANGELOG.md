@@ -17,6 +17,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 - Standardized button properties to ensure consistent API usage across the application.
 - Refactored the component structure to improve maintainability and code readability.
+- Updated the `README.md` documentation to reflect the standardization of button properties using `variant` and `size` terminology.
 
 ## [1.2.3] - 2025-12-19
 
