@@ -52,76 +52,33 @@
   }
 
   &.tv-btn-success {
-    @include mixins.typeButton(
-      variables.$success-bg,
+    @include mixins.typeButton(variables.$success-bg,
       variables.$light-button-text,
-      variables.$success-bg
-    );
+      variables.$success-bg );
   }
 
   &.tv-btn-error {
-    @include mixins.typeButton(
-      variables.$error-bg,
+    @include mixins.typeButton(variables.$error-bg,
       variables.$light-button-text,
-      variables.$error-bg
-    );
+      variables.$error-bg );
   }
 
   &.tv-btn-warning {
-    @include mixins.typeButton(
-      variables.$warning-bg,
+    @include mixins.typeButton(variables.$warning-bg,
       variables.$light-button-text,
-      variables.$warning-bg
-    );
+      variables.$warning-bg );
   }
 
   &.tv-btn-info {
-    @include mixins.typeButton(
-      variables.$info-bg,
+    @include mixins.typeButton(variables.$info-bg,
       variables.$light-button-text,
-      variables.$info-bg
-    );
-  }
-
-  &.tv-btn-text {
-    background-color: transparent;
-    color: variables.$dark-text;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    min-width: unset;
-    font-weight: 500;
-    font-size: 14px;
-    width: auto;
-    transition: all 0.2s ease-in-out;
-    box-shadow: none;
-
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-      color: color.adjust(variables.$dark-text, $lightness: -10%);
-      text-decoration: none;
-    }
-
-    &:active {
-      background-color: rgba(0, 0, 0, 0.1);
-      color: color.adjust(variables.$dark-text, $lightness: -15%);
-      transform: scale(0.98);
-    }
-
-    &.tv-btn-disabled {
-      color: color.adjust(variables.$dark-text, $lightness: 40%);
-      background-color: transparent;
-      opacity: 0.6;
-      cursor: not-allowed;
-      pointer-events: none;
-    }
+      variables.$info-bg );
   }
 
   & {
-    @include mixins.typeButton(
-      variables.$dark-button-bg,
+    @include mixins.typeButton(variables.$dark-button-bg,
       variables.$dark-text,
-      variables.$dark-button-bg
-    );
+      variables.$dark-button-bg );
   }
 
   &.tv-btn-icon-only {
@@ -137,7 +94,7 @@
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 
     &.tv-icon {
-      @include mixins.defaultIconSize(20px); // Puedes ajustar el tamaño
+      @include mixins.defaultIconSize(20px);
       margin: 0;
       color: variables.$dark-text;
     }
@@ -156,6 +113,7 @@
       pointer-events: none;
     }
   }
+
   .tv-spinner {
     @include mixins.defaultIconSize(18px);
     animation: spin 1s linear infinite;
@@ -169,6 +127,7 @@
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
