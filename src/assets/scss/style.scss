@@ -43,11 +43,11 @@
     border-radius: 10px;
   }
 
-  &.tv-btn-small {
+  &.tv-btn-sm {
     @include mixins.buttonSize(80px, auto, 12px, 0.6rem 1rem);
   }
 
-  &.tv-btn-large {
+  &.tv-btn-lg {
     @include mixins.buttonSize(150px, auto, 15px, 1rem 1.5rem);
   }
 

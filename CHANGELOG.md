@@ -4,12 +4,16 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.2.4] - 2026-01-19
+## [unreleased] - 2026-01-19
 
 ### Dependencies
 - Update `@todovue/tv-demo` to `^1.4.3`.
 - Update `sass` to `^1.97.2`.
 - Update `vite` to `^7.3.1`.
+
+### Changed
+- Standardized button properties to ensure consistent API usage across the application.
+- Refactored the component structure to improve maintainability and code readability.
 
 ## [1.2.3] - 2025-12-19
 
@@ -112,6 +116,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Ready-to-use as a standalone or global Vue component.
 - Scoped styles using SCSS.
 
+[1.2.3]: https://github.com/TODOvue/tv-button/pull/21/files
 [1.2.2]: https://github.com/TODOvue/tv-button/pull/20/files
 [1.2.1]: https://github.com/TODOvue/tv-button/pull/19/files
 [1.2.0]: https://github.com/TODOvue/tv-button/pull/18/files

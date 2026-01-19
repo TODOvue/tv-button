@@ -59,7 +59,7 @@ export const demos = [
   {
     id: 4,
     title: "Small",
-    propsData: { buttonText: "Small", small: true, onClick: clickHandler },
+    propsData: { buttonText: "Small", size: "sm", onClick: clickHandler },
     description: "Default button with small size.",
     html: Small,
   },
@@ -68,7 +68,7 @@ export const demos = [
     title: "Rounded",
     propsData: {
       buttonText: "Rounded",
-      isRounded: true,
+      rounded: true,
       onClick: clickHandler,
     },
     description: "Default button with rounded corners.",
@@ -86,7 +86,7 @@ export const demos = [
     title: "Outlined",
     propsData: {
       buttonText: "Outlined",
-      isOutlined: true,
+      outlined: true,
       onClick: clickHandler,
     },
     description: "Default button with outlined style.",
@@ -109,7 +109,7 @@ export const demos = [
     title: "Loading",
     propsData: {
       buttonText: "Default",
-      isLoading: true,
+      loading: true,
       onClick: clickHandler
     },
     description: "Default button with loading state.",
@@ -118,7 +118,7 @@ export const demos = [
   {
     id: 9,
     title: "Large",
-    propsData: { buttonText: "Large", large: true, onClick: clickHandler },
+    propsData: { buttonText: "Large", size: "lg", onClick: clickHandler },
     description: "Default button with large size.",
     html: Large,
   },
@@ -127,16 +127,16 @@ export const demos = [
     title: "Success",
     propsData: {
       buttonText: "Success",
-      isSuccess: true,
+      variant: "success",
       onClick: clickHandler,
     },
     description: "Default button with success style.",
-    html:Success,
+    html: Success,
   },
   {
     id: 11,
     title: "Info",
-    propsData: { buttonText: "Info", info: true, onClick: clickHandler },
+    propsData: { buttonText: "Info", variant: "info", onClick: clickHandler },
     description: "Default button with info style.",
     html: Info,
   },
@@ -145,7 +145,7 @@ export const demos = [
     title: "Warning",
     propsData: {
       buttonText: "Warning",
-      isWarning: true,
+      variant: "warning",
       onClick: clickHandler,
     },
     description: "Default button with warning style.",
@@ -154,7 +154,7 @@ export const demos = [
   {
     id: 13,
     title: "Error",
-    propsData: { buttonText: "Error", error: true, onClick: clickHandler },
+    propsData: { buttonText: "Error", variant: "error", onClick: clickHandler },
     description: "Default button with error style.",
     html: Error,
   },
@@ -163,7 +163,7 @@ export const demos = [
     title: "Disabled",
     propsData: {
       buttonText: "Disabled",
-      isDisabled: true,
+      disabled: true,
       onClick: clickHandler,
     },
     description: "Default button with disabled style.",
@@ -223,7 +223,7 @@ export const demos = [
     propsData: {
       type: 'icon',
       icon: "remove",
-      isOutlined: true,
+      outlined: true,
       onClick: clickHandler,
     },
     description: "Default button with type icon outlined.",
@@ -235,7 +235,7 @@ export const demos = [
     propsData: {
       type: 'icon',
       icon: "edit",
-      isOutlined: true,
+      outlined: true,
       onClick: clickHandler,
       customStyle: {
         backgroundColor: "#5f31b7",
@@ -251,7 +251,7 @@ export const demos = [
     propsData: {
       type: 'icon',
       icon: "todovue",
-      isOutlined: true,
+      outlined: true,
       onClick: clickHandler,
     },
     description: "Default button with type icon outlined.",
@@ -274,9 +274,9 @@ export const demos = [
     title: "Various props 1",
     propsData: {
       buttonText: "Press me",
-      isSmall: true,
-      isRounded: true,
-      isOutlined: true,
+      size: "sm",
+      rounded: true,
+      outlined: true,
       onClick: clickHandler,
     },
     description: "Default button with various props.",
@@ -287,8 +287,8 @@ export const demos = [
     title: "Various props 2",
     propsData: {
       buttonText: "Press me",
-      isLarge: true,
-      isInfo: true,
+      size: "lg",
+      variant: "info",
       onClick: clickHandler,
     },
     description: "Default button with various props.",
@@ -299,9 +299,9 @@ export const demos = [
     title: "Various props 3",
     propsData: {
       buttonText: "Press me",
-      isFull: true,
-      isWarning: true,
-      isRounded: true,
+      full: true,
+      variant: "warning",
+      rounded: true,
       onClick: clickHandler,
     },
     description: "Default button with various props.",
@@ -312,8 +312,8 @@ export const demos = [
     title: "Various props 4",
     propsData: {
       buttonText: "Press me",
-      isSuccess: true,
-      isDisabled: true,
+      variant: "success",
+      disabled: true,
       onClick: clickHandler,
     },
     description: "Default button with various props.",
@@ -324,7 +324,7 @@ export const demos = [
     title: "Various props 5",
     propsData: {
       buttonText: "Press me",
-      isRounded: true,
+      rounded: true,
       customStyle: {
         backgroundColor: "#1144b3",
         color: "#ffffff",

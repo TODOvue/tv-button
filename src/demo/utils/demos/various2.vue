@@ -1,7 +1,7 @@
 <template>
   <tv-button
-    large
-    info
+    size="lg"
+    variant="info"
     @click="clickHandler"
   >
     Press me

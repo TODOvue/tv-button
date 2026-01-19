@@ -1,6 +1,6 @@
 <template>
   <tv-button
-    success
+    variant="success"
     disabled
     @click="clickHandler"
   >

@@ -1,6 +1,6 @@
 <template>
   <tv-button
-    small
+    size="sm"
     rounded
     outlined
     @click="clickHandler"

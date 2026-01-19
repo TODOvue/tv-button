@@ -1,6 +1,6 @@
 <template>
   <tv-button
-    info
+    variant="info"
     @click="clickHandler"
   >
     Info
