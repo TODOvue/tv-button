@@ -4,6 +4,13 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.2.4] - 2026-01-19
+
+### Dependencies
+- Update `@todovue/tv-demo` to `^1.4.3`.
+- Update `sass` to `^1.97.2`.
+- Update `vite` to `^7.3.1`.
+
 ## [1.2.3] - 2025-12-19
 
 ### Added
