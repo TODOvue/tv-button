@@ -4,7 +4,7 @@ All notable changes to `@todovue/tv-button` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [unreleased] - 2026-01-19
+## [1.3.0] - 2026-01-19
 
 ### Added
 - Add `dashboard`, `folder`, `image`, `link`, `mail`, `save` icons.
@@ -123,6 +123,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Ready-to-use as a standalone or global Vue component.
 - Scoped styles using SCSS.
 
+[1.3.0]: https://github.com/TODOvue/tv-button/pull/22/files
 [1.2.3]: https://github.com/TODOvue/tv-button/pull/21/files
 [1.2.2]: https://github.com/TODOvue/tv-button/pull/20/files
 [1.2.1]: https://github.com/TODOvue/tv-button/pull/19/files
