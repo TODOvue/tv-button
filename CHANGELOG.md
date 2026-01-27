@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 - Moved the `@todovue/tv-demo` component import from main.js to `Demo.vue` to localize its usage.
+- Updated build commands to include `README.md` and `CHANGELOG.md` files in the public directory during the build process.
 
 ### Removed
 - Eliminated the global import of the `@todovue/tv-demo` component from `main.js`.

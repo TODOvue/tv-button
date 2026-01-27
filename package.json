@@ -58,7 +58,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "cp README.md public/ && cp CHANGELOG.md public/ && vite build",
     "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
