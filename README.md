@@ -21,7 +21,7 @@ A flexible, framework‑agnostic Vue 3 button component with variants, sizes, ic
 - [Installation](#installation)
 - [Quick Start (SPA)](#quick-start-spa)
 - [Style usage](#style-usage)
-- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Nuxt 4 / SSR Usage](#nuxt-4--ssr-usage)
 - [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Events](#events)
@@ -113,7 +113,7 @@ export default defineNuxtConfig({
 })
 ```
 
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 Create a plugin file: `plugins/tv-button.client.ts` (client-only is fine, or without suffix for SSR as it is safe):
 ```ts
 import { defineNuxtPlugin } from '#app'
