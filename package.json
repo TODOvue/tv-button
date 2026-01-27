@@ -32,7 +32,10 @@
       "require": "./dist/tv-button.cjs.js"
     },
     "./style.css": "./dist/tv-button.css",
-    "./nuxt": "./nuxt.js"
+    "./nuxt": "./nuxt.js",
+    "./demo": {
+      "import": "./src/demo/Demo.vue"
+    }
   },
   "main": "dist/tv-button.cjs.js",
   "module": "dist/tv-button.es.js",
@@ -47,23 +50,24 @@
     "dist",
     "LICENSE",
     "README.md",
-    "nuxt.js"
+    "nuxt.js",
+    "src"
   ],
   "engines": {
     "node": ">=20.19.0"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "cp README.md public/ && cp CHANGELOG.md public/ && vite build",
     "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
-    "vue": "^3.5.26"
+    "vue": "^3.5.27"
   },
   "devDependencies": {
-    "@todovue/tv-demo": "^1.4.3",
+    "@todovue/tv-demo": "^1.4.10",
     "@vitejs/plugin-vue": "^6.0.3",
-    "sass": "^1.97.2",
+    "sass": "^1.97.3",
     "vite": "^7.3.1",
     "vite-plugin-dts": "^4.0.0"
   }
