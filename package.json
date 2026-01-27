@@ -32,7 +32,10 @@
       "require": "./dist/tv-button.cjs.js"
     },
     "./style.css": "./dist/tv-button.css",
-    "./nuxt": "./nuxt.js"
+    "./nuxt": "./nuxt.js",
+    "./demo": {
+      "import": "./src/demo/Demo.vue"
+    }
   },
   "main": "dist/tv-button.cjs.js",
   "module": "dist/tv-button.es.js",
@@ -47,7 +50,8 @@
     "dist",
     "LICENSE",
     "README.md",
-    "nuxt.js"
+    "nuxt.js",
+    "src"
   ],
   "engines": {
     "node": ">=20.19.0"

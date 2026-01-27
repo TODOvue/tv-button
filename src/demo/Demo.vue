@@ -1,5 +1,6 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
+import { TvDemo } from '@todovue/tv-demo'
 import { demos } from './utils/mocks.js'
 
 const TvButton = defineAsyncComponent(/* webpackChunkName: "TvButton" */() => import('../components/TvButton.vue'))

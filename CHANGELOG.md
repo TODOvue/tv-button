@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [1.2.5] - 2025-01-27
 
+### Changed
+- Moved the `@todovue/tv-demo` component import from main.js to `Demo.vue` to localize its usage.
+
+### Removed
+- Eliminated the global import of the `@todovue/tv-demo` component from `main.js`.
+
 ### Dependencies
 - Updated `@todovue/tv-demo` to `^1.4.10`.
 - Updated `vue` to `^3.5.27`.
