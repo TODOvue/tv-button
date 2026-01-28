@@ -8,6 +8,7 @@
   "type": "module",
   "homepage": "https://ui.todovue.blog/button",
   "repository": {
+    "name": "@todovue/tv-button",
     "type": "git",
     "url": "git+https://github.com/TODOvue/tv-button.git"
   },
@@ -47,9 +48,10 @@
     "dist/*.css"
   ],
   "files": [
-    "dist",
+    "CHANGELOG.md",
     "LICENSE",
     "README.md",
+    "dist",
     "nuxt.js",
     "src"
   ],
@@ -58,8 +60,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "cp README.md public/ && cp CHANGELOG.md public/ && vite build",
-    "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
+    "build": "vite build"
   },
   "peerDependencies": {
     "vue": "^3.5.27"
